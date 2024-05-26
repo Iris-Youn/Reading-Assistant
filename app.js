@@ -50,7 +50,7 @@ function displayMessage(input, response) {
 }
 
 async function fetchGPTResponse(query) {
-    const apiKey = 'sk-proj-I6yqTq67G8opn9EPR3IbT3BlbkFJBbARM46wnk4Ttv6lmiZJ'; // 실제 OpenAI API 키로 교체하세요.
+    const apiKey = 'sk-proj-Ow64JGgtAHE3fiPL2AaWT3BlbkFJX1VX3xr8JIKgdXsojqjn';
     try {
         console.log('Fetching GPT response for query:', query);
         const response = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
