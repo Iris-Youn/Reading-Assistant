@@ -48,7 +48,7 @@ async function fetchGPTResponse(query) {
 }
 
 async function logToGoogleSheets(input, response) {
-    const sheetId = '1cwCB87RsE1bNioQPsw1Jw1v-IO0tIZM9j_ldUec5vQo';
+    const sheetId = 'https://script.google.com/macros/s/AKfycbwVl2gzpoF_HNRLnD-TIb4DwLFIcz4N2OAItGgiPk23j7tigaBi6Uv2hfcZ6y27GRX5Mw/exec';
     const accessToken = await getGoogleAccessToken();
 
     const responseObj = parseResponse(response);
