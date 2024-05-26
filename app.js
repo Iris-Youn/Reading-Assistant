@@ -45,7 +45,7 @@ function displayMessage(input, response) {
 }
 
 async function fetchGPTResponse(query) {
-    const apiKey = 'YOUR_OPENAI_API_KEY'; // Replace with your OpenAI API key
+    const apiKey = 'sk-proj-I6yqTq67G8opn9EPR3IbT3BlbkFJBbARM46wnk4Ttv6lmiZJ';
     try {
         const response = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
             method: 'POST',
@@ -68,7 +68,7 @@ async function fetchGPTResponse(query) {
 }
 
 async function logToGoogleSheets(input, response) {
-    const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL'; // Replace with your Google Apps Script URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwVl2gzpoF_HNRLnD-TIb4DwLFIcz4N2OAItGgiPk23j7tigaBi6Uv2hfcZ6y27GRX5Mw/exec';
     const payload = {
         userId: userId,
         word: input,
