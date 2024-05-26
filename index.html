@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPT 기반 챗봇</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login">
+        <h2>Enter your ID</h2>
+        <input type="text" id="userId" placeholder="Enter your ID">
+        <button onclick="login()">Submit</button>
+    </div>
+    <div id="chatbot" style="display:none;">
+        <h2>Hello, what can I do for you?</h2>
+        <div id="chatbox"></div>
+        <input type="text" id="userInput" placeholder="Type a word to search">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
