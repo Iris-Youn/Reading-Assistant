@@ -48,7 +48,7 @@ async function fetchGPTResponse(query) {
 }
 
 async function logToGoogleSheets(input, response) {
-    const sheetId = 'YOUR_GOOGLE_SHEET_ID';
+    const sheetId = '1cwCB87RsE1bNioQPsw1Jw1v-IO0tIZM9j_ldUec5vQo';
     const accessToken = await getGoogleAccessToken();
 
     const responseObj = parseResponse(response);
