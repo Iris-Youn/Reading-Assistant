@@ -1,12 +1,20 @@
+document.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    document.getElementById('loginButton').addEventListener('click', login);
+    document.getElementById('sendButton').addEventListener('click', sendMessage);
+});
+
 let userId;
 
 function login() {
     userId = document.getElementById('userId').value;
+    console.log('Login function called');
     if (userId) {
         console.log('User ID:', userId);
         document.getElementById('login').style.display = 'none';
         document.getElementById('chatbot').style.display = 'block';
     } else {
+        console.log('No user ID entered');
         alert('Please enter your ID');
     }
 }
@@ -37,7 +45,7 @@ function displayMessage(input, response) {
 }
 
 async function fetchGPTResponse(query) {
-    const apiKey = 'sk-proj-3YPfap7WV23TIapzz2NzT3BlbkFJLyOEU7bTKZjImAMs3NU8';
+    const apiKey = 'YOUR_OPENAI_API_KEY'; // Replace with your OpenAI API key
     try {
         const response = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
             method: 'POST',
@@ -60,7 +68,7 @@ async function fetchGPTResponse(query) {
 }
 
 async function logToGoogleSheets(input, response) {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwVl2gzpoF_HNRLnD-TIb4DwLFIcz4N2OAItGgiPk23j7tigaBi6Uv2hfcZ6y27GRX5Mw/exec';
+    const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL'; // Replace with your Google Apps Script URL
     const payload = {
         userId: userId,
         word: input,
